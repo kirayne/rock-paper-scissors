@@ -11,10 +11,11 @@ function computerPlay(){
     let array = [paper, scissors, rock];
     computerSelection = array[Math.floor(Math.random()*array.length)];
     return computerSelection;
+ 
 }
 
 function singleRound(playerSelection, computerSelection){
-   
+    let result;
     if(playerSelection === computerSelection){
         result = draw;
     }
@@ -40,7 +41,7 @@ function game(){
     for(let i=1; i<=5; i++){
         const input = prompt( "Round " + i + " write one: rock paper or scissors").toLowerCase();
         const ai = computerPlay();
-        singleRound(input, ai);
+        const result = singleRound(input, ai);
         console.log(result);
         }
         if(computerScore>playerScore){
