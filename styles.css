@@ -1,0 +1,27 @@
+#body{
+    background-color:rgb(39, 39, 39);
+    display: flex;
+    justify-content: center;
+}
+
+#paper{
+    height: 250px;
+    width: 250px;
+    margin: 20px;
+    border:solid gray;
+}
+
+#scissors{
+    height: 250px;
+    width: 250px;
+    margin: 20px;
+    border:solid gray;
+}
+
+#rock  {
+    height: 250px;
+    width: 250px;
+    margin: 20px;
+    border:solid gray;]
+    
+}

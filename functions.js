@@ -36,22 +36,36 @@ function singleRound(playerSelection, computerSelection){
     return result;
 }
 
-function game(){ 
-    //game will be 5 rounds, who won the most number of rounds win the game
-    for(let i=1; i<=5; i++){
-        const input = prompt( "Round " + i + " write one: rock paper or scissors").toLowerCase();
-        const ai = computerPlay();
-        const result = singleRound(input, ai);
+(function(){ 
+  
+        
+    var result;
+    document.querySelectorAll(".options").forEach(element => {
+        element.addEventListener('click', function(e) {
+        const ai = computerPlay(); 
+        result = singleRound(e.target.dataset.playerSelection, ai);
+
         console.log(result);
-        }
-        if(computerScore>playerScore){
+            });
+
+         });
+})()
+    //old game version
+    //game will be 5 rounds, who won the most number of rounds win the game 
+
+    //for(let i=1; i<=5; i++){
+
+        //old version
+        //const input = prompt( "Round " + i + " write one: rock paper or scissors").toLowerCase();
+        //console.log(result);}
+
+        /*if(computerScore>playerScore){
             console.log("You lost the game");
         }
-        else if(computerScore===playerScore){
+        /else if(computerScore===playerScore){
             console.log("The game has no winner");
         }
         else{
             console.log("You won the game");
-        }
-
-}
+        } funçao auto executavel
+    */
